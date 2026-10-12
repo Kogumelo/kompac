@@ -77,7 +77,7 @@ topo do arquivo com o próprio nome.
 | `Sources/Kompac` | app AppKit + SwiftUI, um `NSDocument` somente leitura por arquivo aberto; a janela Novo (`CompressView`/`CompressModel`) não é documento |
 | `Resources/<idioma>.lproj` | textos da interface (`Localizable.strings`) e nomes dos tipos de documento (`InfoPlist.strings`), uma pasta por idioma |
 | `Tests/KompacCoreTests` | `swift test`; as fixtures são geradas por `Tests/make-fixtures.sh` |
-| `icon/` | `kompac.svg` (desenho) e `Kompac.icns` (versionado); `make-icon.sh` regera o .icns quando o desenho muda |
+| `icon/` | `kompac.svg` (desenho), `kompac-16.svg` (desenho de 16 px) e `Kompac.icns` (versionado); `make-icon.sh` regera o .icns quando o desenho muda |
 | `.claude/commands/km-instalar.md` | o deploy: do `main` para `/Applications` |
 | `vendor/7zz` | 7-Zip 26.04 oficial para macOS (universal), de https://www.7-zip.org |
 | `Resources/7zip-LICENSE.txt` | licença do 7-Zip (GNU LGPL + restrição unRAR), copiada para dentro do app |
