@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="1024" height="1024">
+  <!-- Kompac icon: a closed box with a zipper, and the K on its front.
+       Same plate as Konfig's (84 per side inside 100, radius 19), same navy and yellow.
+       Box of 64 wide, centered; lid band on top; zipper teeth run down the middle of the lid
+       and stop at the pull tab, so the K has the lower face to itself. -->
+  <defs>
+    <linearGradient id="placa" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eef2f8"/><stop offset="1" stop-color="#d5dce8"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="84" height="84" rx="19" fill="url(#placa)" stroke="#000" stroke-opacity=".10" stroke-width=".8"/>
+  <!-- body -->
+  <rect x="18" y="30" width="64" height="50" rx="7" fill="#22314f"/>
+  <!-- lid -->
+  <rect x="15" y="22" width="70" height="14" rx="5" fill="#33476f"/>
+  <!-- zipper teeth on the lid -->
+  <g fill="#f4b740">
+    <rect x="46" y="24" width="4" height="2.2" rx=".5"/>
+    <rect x="50" y="26.6" width="4" height="2.2" rx=".5"/>
+    <rect x="46" y="29.2" width="4" height="2.2" rx=".5"/>
+    <rect x="50" y="31.8" width="4" height="2.2" rx=".5"/>
+  </g>
+  <!-- pull tab -->
+  <rect x="46.5" y="35" width="7" height="9" rx="2" fill="#f4b740"/>
+  <rect x="48.6" y="38.5" width="2.8" height="3.4" rx="1" fill="#22314f"/>
+  <!-- K, the 20-high drawing scaled 1.2x (24 high) like Konfig's -->
+  <g fill="#f4b740" transform="translate(39 50) scale(1.2) translate(-28 -40)">
+    <rect x="28" y="40" width="5" height="20" rx=".8"/>
+    <polygon points="32,51 40.5,40 46,40 35.5,53"/>
+    <polygon points="35,48 46,60 40.5,60 32,52"/>
+  </g>
+</svg>

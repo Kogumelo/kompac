@@ -1,0 +1,17 @@
+/* Português (Brasil). Keys are the English values in Info.plist.
+   Having this folder also makes AppKit use its own Portuguese texts (alerts, "Open Recent"…). */
+
+"CFBundleName" = "Kompac";
+"NSHumanReadableCopyright" = "© 2026 Kogumelo Informática Ltda. Motor: 7-Zip 26.04 © Igor Pavlov, licença GNU LGPL (ver Resources/7zip-LICENSE.txt).";
+
+/* Document type names (CFBundleTypeName) and imported type descriptions (UTTypeDescription) */
+"ZIP archive" = "Arquivo ZIP";
+"RAR archive" = "Arquivo RAR";
+"7-Zip archive" = "Arquivo 7-Zip";
+"tar archive" = "Arquivo tar";
+"gzip archive" = "Arquivo gzip";
+"bzip2 archive" = "Arquivo bzip2";
+"xz archive" = "Arquivo xz";
+"Zstandard archive" = "Arquivo Zstandard";
+"ISO image" = "Imagem ISO";
+"Disk image" = "Imagem de disco";

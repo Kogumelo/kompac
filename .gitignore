@@ -1,0 +1,9 @@
+.DS_Store
+
+# Generated — ./build.sh recreates them
+*.app/
+.build/
+DerivedData/
+
+# Kommand mission attachments
+.kommand-attachments/

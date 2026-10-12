@@ -1,0 +1,456 @@
+/* English. Keys are the English text used in Sources/; the values repeat them. */
+
+/* MARK: - KompacCore/Compression.swift */
+
+/* Archive format description (ZIP), shown after the format name */
+"maximum compatibility (Windows, Mac, phone)" = "maximum compatibility (Windows, Mac, phone)";
+
+/* Archive format description (7z), shown after the format name */
+"maximum compression, password with encrypted names" = "maximum compression, password with encrypted names";
+
+/* Archive format description (tar.gz), shown after the format name */
+"Linux servers" = "Linux servers";
+
+/* Archive format description (tar.xz), shown after the format name */
+"Linux, smallest size" = "Linux, smallest size";
+
+/* Compression level */
+"Fast" = "Fast";
+
+/* Compression level */
+"Normal" = "Normal";
+
+/* Compression level */
+"Maximum" = "Maximum";
+
+/* Default file name (without extension) for an archive made from several items */
+"Archive" = "Archive";
+
+/* Error message */
+"Nothing to compress." = "Nothing to compress.";
+
+/* Error message; %@ = file or folder name */
+"“%@” no longer exists." = "“%@” no longer exists.";
+
+/* Error message */
+"Invalid name for the archive." = "Invalid name for the archive.";
+
+/* Error message; %@ = format name such as tar.gz */
+"The %@ format does not accept a password." = "The %@ format does not accept a password.";
+
+/* Error message */
+"A ZIP password cannot contain accents or symbols such as €. Use only unaccented letters, digits and common punctuation, or choose 7z." = "A ZIP password cannot contain accents or symbols such as €. Use only unaccented letters, digits and common punctuation, or choose 7z.";
+
+/* Error message */
+"7zz did not produce any part." = "7zz did not produce any part.";
+
+/* Warning shown after compressing when 7zz gave no details */
+"7zz finished with warnings." = "7zz finished with warnings.";
+
+/* MARK: - KompacCore/Extraction.swift */
+
+/* Error message */
+"Nothing was extracted." = "Nothing was extracted.";
+
+/* Folder name for the contents of an archive whose name has no stem; %@ = archive file name */
+"%@ (contents)" = "%@ (contents)";
+
+/* MARK: - KompacCore/NameEncoding.swift */
+
+/* Name encoding option */
+"Automatic" = "Automatic";
+
+/* Name encoding option */
+"CP437 (DOS, ZIP default)" = "CP437 (DOS, ZIP default)";
+
+/* Name encoding option */
+"CP850 (DOS Western Europe)" = "CP850 (DOS Western Europe)";
+
+/* MARK: - KompacCore/Preview.swift */
+
+/* Preview: kind of an item without extension */
+"File" = "File";
+
+/* Preview: item kind; %@ = file extension */
+"Database (.%@)" = "Database (.%@)";
+
+/* Preview: item kind; %@ = file extension */
+"Image (.%@)" = "Image (.%@)";
+
+/* Preview: item kind */
+"PDF document" = "PDF document";
+
+/* Preview: item kind; %@ = file extension */
+"Text document (.%@)" = "Text document (.%@)";
+
+/* Preview: item kind; %@ = file extension */
+"Spreadsheet (.%@)" = "Spreadsheet (.%@)";
+
+/* Preview: item kind; %@ = file extension */
+"Compressed archive (.%@)" = "Compressed archive (.%@)";
+
+/* Preview: item kind; %@ = file extension */
+"Program (.%@)" = "Program (.%@)";
+
+/* Preview: item kind; %@ = file extension */
+"Audio (.%@)" = "Audio (.%@)";
+
+/* Preview: item kind; %@ = file extension */
+"Video (.%@)" = "Video (.%@)";
+
+/* Preview: kind of an item with an unknown extension; %@ = file extension */
+".%@ file" = ".%@ file";
+
+/* MARK: - KompacCore/SevenZip.swift */
+
+/* Error message */
+"The 7zz engine was not found inside the app." = "The 7zz engine was not found inside the app.";
+
+/* Error message */
+"This archive is password protected." = "This archive is password protected.";
+
+/* Error message */
+"Wrong password." = "Wrong password.";
+
+/* Error message */
+"Could not open: it is not a recognized archive, or it is damaged." = "Could not open: it is not a recognized archive, or it is damaged.";
+
+/* Error message */
+"Cancelled." = "Cancelled.";
+
+/* Error message when 7zz gave no details; %ld = exit code */
+"7zz finished with error %ld." = "7zz finished with error %ld.";
+
+/* MARK: - Kompac/App.swift */
+
+/* Open panel message */
+"Choose an archive to open" = "Choose an archive to open";
+
+/* App menu; %@ = app name */
+"About %@" = "About %@";
+
+/* App menu; %@ = app name */
+"Hide %@" = "Hide %@";
+
+/* App menu */
+"Hide Others" = "Hide Others";
+
+/* App menu */
+"Show All" = "Show All";
+
+/* App menu; %@ = app name */
+"Quit %@" = "Quit %@";
+
+/* File menu submenu */
+"Open Recent" = "Open Recent";
+
+/* File › Open Recent menu */
+"Clear Menu" = "Clear Menu";
+
+/* File menu: new compress window */
+"New…" = "New…";
+
+/* File menu */
+"Open…" = "Open…";
+
+/* File menu */
+"Close" = "Close";
+
+/* Menu title */
+"Edit" = "Edit";
+
+/* Edit menu */
+"Copy" = "Copy";
+
+/* Edit menu */
+"Select All" = "Select All";
+
+/* Menu title */
+"Extract" = "Extract";
+
+/* Extract menu */
+"Extract Selected" = "Extract Selected";
+
+/* Extract menu */
+"Extract All" = "Extract All";
+
+/* Extract menu */
+"Choose Destination…" = "Choose Destination…";
+
+/* Extract menu */
+"Show Extracted in Finder" = "Show Extracted in Finder";
+
+/* Extract menu */
+"Enter Password…" = "Enter Password…";
+
+/* Menu title */
+"Window" = "Window";
+
+/* Window menu */
+"Minimize" = "Minimize";
+
+/* Window menu */
+"Zoom" = "Zoom";
+
+/* Window menu */
+"Bring All to Front" = "Bring All to Front";
+
+/* MARK: - Kompac/WindowModel.swift */
+
+/* Password sheet error */
+"Wrong password. Try again." = "Wrong password. Try again.";
+
+/* Preview of a selected folder; %1$@ = file count, %2$@ = folder count, %3$@ = total size */
+"Folder · %@, %@ · %@" = "Folder · %@, %@ · %@";
+
+/* Count noun, singular ("1 file") */
+"file" = "file";
+
+/* Count noun, plural ("3 files") */
+"files" = "files";
+
+/* Count noun, singular ("1 folder") */
+"folder" = "folder";
+
+/* Count noun, plural ("3 folders") */
+"folders" = "folders";
+
+/* Count noun, singular ("1 item") */
+"item" = "item";
+
+/* Count noun, plural ("3 items") */
+"items" = "items";
+
+/* Preview of an encrypted file; %1$@ = file kind, %2$@ = size */
+"%@ · %@ · password protected" = "%@ · %@ · password protected";
+
+/* Preview of a binary file; %1$@ = file kind, %2$@ = size */
+"%@ · %@ · no preview (binary content)" = "%@ · %@ · no preview (binary content)";
+
+/* Preview error; %@ = error message */
+"Could not read: %@" = "Could not read: %@";
+
+/* Top banner notice */
+"Select items in the list first." = "Select items in the list first.";
+
+/* Extraction progress label; %@ = item count such as "3 items" */
+"Extracting %@…" = "Extracting %@…";
+
+/* Extraction progress label */
+"Extracting everything…" = "Extracting everything…";
+
+/* Top banner notice */
+"Extraction cancelled. Nothing was written." = "Extraction cancelled. Nothing was written.";
+
+/* Top banner notice; %@ = error message */
+"Extraction failed: %@" = "Extraction failed: %@";
+
+/* Destination panel button */
+"Choose" = "Choose";
+
+/* Destination panel message; %@ = archive file name */
+"Where to extract the contents of %@" = "Where to extract the contents of %@";
+
+/* Name encoding summary; %@ = encoding picked, such as UTF-8 */
+"Automatic (%@)" = "Automatic (%@)";
+
+/* Footer compression ratio; %ld = percent saved */
+"%ld%% smaller" = "%ld%% smaller";
+
+/* Footer compression ratio when nothing was saved */
+"no compression" = "no compression";
+
+/* Size under 1 KB; %ld = byte count */
+"%ld bytes" = "%ld bytes";
+
+/* MARK: - Kompac/WindowView.swift */
+
+/* Shown while the archive listing loads */
+"Reading contents…" = "Reading contents…";
+
+/* Title when the archive has encrypted names */
+"Password protected" = "Password protected";
+
+/* Description when the archive has encrypted names */
+"Even the file names are encrypted. Enter the password to see the contents." = "Even the file names are encrypted. Enter the password to see the contents.";
+
+/* Title when the archive cannot be read */
+"Could not open" = "Could not open";
+
+/* Tooltip of Extract Selected */
+"Extracts the items selected in the list (⌘E)" = "Extracts the items selected in the list (⌘E)";
+
+/* Tooltip of Extract All */
+"Extracts all contents (⇧⌘E)" = "Extracts all contents (⇧⌘E)";
+
+/* Destination menu item; %@ = name of the folder containing the archive */
+"Archive's Folder (%@)" = "Archive's Folder (%@)";
+
+/* Destination menu item */
+"Choose Another Folder…" = "Choose Another Folder…";
+
+/* Tooltip of the destination menu; %@ = folder path */
+"Destination: %@" = "Destination: %@";
+
+/* Label before the name encoding picker */
+"Names in" = "Names in";
+
+/* Tooltip of the encoding picker */
+"Encoding of the names. ZIPs made on Windows usually store them in CP850/CP437 or Windows-1252." = "Encoding of the names. ZIPs made on Windows usually store them in CP850/CP437 or Windows-1252.";
+
+/* Column header */
+"Name" = "Name";
+
+/* Tooltip of the lock icon next to an encrypted item */
+"Encrypted" = "Encrypted";
+
+/* Column header */
+"Size" = "Size";
+
+/* Column header: packed size */
+"Compressed" = "Compressed";
+
+/* Column header: modification date */
+"Modified" = "Modified";
+
+/* Context menu, one item selected */
+"Extract Item" = "Extract Item";
+
+/* Context menu; %ld = number of selected items */
+"Extract %ld Items" = "Extract %ld Items";
+
+/* Preview pane placeholder */
+"Click a file to see its beginning without extracting." = "Click a file to see its beginning without extracting.";
+
+/* Preview pane while loading; %@ = file name */
+"Reading %@…" = "Reading %@…";
+
+/* Preview header when truncated; %@ = file size, e.g. 48.3 MB */
+"first 16 KB of %@" = "first 16 KB of %@";
+
+/* Preview of an empty text file */
+"(empty)" = "(empty)";
+
+/* Button */
+"Cancel" = "Cancel";
+
+/* Footer after extracting; %@ = destination path */
+"Extracted to %@" = "Extracted to %@";
+
+/* Button */
+"Show in Finder" = "Show in Finder";
+
+/* Footer pill; %@ = encoding in use, e.g. CP850 */
+"accents fixed · %@" = "accents fixed · %@";
+
+/* Footer pill when names look garbled */
+"names with odd characters" = "names with odd characters";
+
+/* Password sheet title */
+"Password Required" = "Password Required";
+
+/* Password field placeholder */
+"Password" = "Password";
+
+/* Button */
+"OK" = "OK";
+
+/* Password sheet reason; %@ = archive name */
+"“%@” has encrypted names." = "“%@” has encrypted names.";
+
+/* Password sheet reason; %@ = archive name */
+"The items to extract from “%@” are encrypted." = "The items to extract from “%@” are encrypted.";
+
+/* Password sheet reason; %@ = archive name */
+"This item of “%@” is encrypted." = "This item of “%@” is encrypted.";
+
+/* MARK: - Kompac/CompressModel.swift */
+
+/* Warning under the password field */
+"A ZIP password only accepts unaccented letters, digits and common symbols. To use accents, choose 7z." = "A ZIP password only accepts unaccented letters, digits and common symbols. To use accents, choose 7z.";
+
+/* Open panel button for choosing items to compress */
+"Add" = "Add";
+
+/* Open panel message */
+"Files and folders to compress" = "Files and folders to compress";
+
+/* Open panel message; %@ = archive file name */
+"Where to save %@" = "Where to save %@";
+
+/* Notice after compressing; %@ = 7zz warning text */
+"Created, with warnings from 7zz: %@" = "Created, with warnings from 7zz: %@";
+
+/* Notice after cancelling compression */
+"Cancelled. The partial archive was deleted." = "Cancelled. The partial archive was deleted.";
+
+/* Notice; %@ = error message */
+"Compression failed: %@" = "Compression failed: %@";
+
+/* MARK: - Kompac/CompressView.swift */
+
+/* Window title */
+"New Compressed Archive" = "New Compressed Archive";
+
+/* Empty compress window */
+"Drag files and folders here" = "Drag files and folders here";
+
+/* Empty compress window, below the title */
+"They go into the archive with their current names.\n.DS_Store, ._* and __MACOSX are left out." = "They go into the archive with their current names.\n.DS_Store, ._* and __MACOSX are left out.";
+
+/* Button that opens a panel to pick items to compress */
+"Choose…" = "Choose…";
+
+/* Tooltip of the minus button next to an item */
+"Remove from the list" = "Remove from the list";
+
+/* Button below the item list */
+"Add…" = "Add…";
+
+/* Compress option label */
+"Format" = "Format";
+
+/* Compress option label: level */
+"Compression" = "Compression";
+
+/* Compress option */
+"Encrypt file names too" = "Encrypt file names too";
+
+/* Tooltip of Encrypt file names too */
+"Without the password, you cannot even see what is inside." = "Without the password, you cannot even see what is inside.";
+
+/* Compress option, followed by a number field and MB */
+"Split into parts of" = "Split into parts of";
+
+/* Unit: megabytes */
+"MB" = "MB";
+
+/* Compress option label */
+"Destination" = "Destination";
+
+/* Destination menu item; %@ = folder name */
+"Next to the Originals (%@)" = "Next to the Originals (%@)";
+
+/* Compress option label: resulting file name */
+"Will create" = "Will create";
+
+/* Password field placeholder */
+"optional (AES-256)" = "optional (AES-256)";
+
+/* Password field placeholder */
+"tar has no password" = "tar has no password";
+
+/* Bottom bar while compressing */
+"Compressing…" = "Compressing…";
+
+/* Bottom bar after a split archive; %ld = number of parts */
+"%ld parts created" = "%ld parts created";
+
+/* Bottom bar after compressing; %@ = file name */
+"Created: %@" = "Created: %@";
+
+/* Button: opens the created archive */
+"Open" = "Open";
+
+/* Button: starts compressing */
+"Compress" = "Compress";
