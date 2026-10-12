@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+  <!-- Kompac icon, 16 px only (icon_16x16.png): drawn on the pixel grid, 1 unit = 1 pixel.
+       At this size the zipper teeth of kompac.svg blur away, so only the K is kept:
+       a 2 px stem and two 1 px stair-step arms. Every other size comes from kompac.svg. -->
+  <defs><linearGradient id="p" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef2f8"/><stop offset="1" stop-color="#d5dce8"/></linearGradient></defs>
+  <rect x="1" y="1" width="14" height="14" rx="3.5" fill="url(#p)" stroke="#000" stroke-opacity=".10" stroke-width="0.13"/>
+  <rect x="3" y="4" width="10" height="8" fill="#22314f" rx="1.5"/>
+  <rect x="5" y="5" width="2" height="6" fill="#f4b740"/>
+  <rect x="8" y="7" width="1" height="1" fill="#f4b740"/>
+  <rect x="9" y="6" width="1" height="1" fill="#f4b740"/>
+  <rect x="10" y="5" width="1" height="1" fill="#f4b740"/>
+  <rect x="8" y="8" width="1" height="1" fill="#f4b740"/>
+  <rect x="9" y="9" width="1" height="1" fill="#f4b740"/>
+  <rect x="10" y="10" width="1" height="1" fill="#f4b740"/>
+  <rect x="11" y="4" width="1" height="1" fill="#f4b740"/>
+  <rect x="11" y="11" width="1" height="1" fill="#f4b740"/>
+</svg>
