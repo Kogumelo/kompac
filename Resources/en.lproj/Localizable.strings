@@ -454,3 +454,9 @@
 
 /* Button: starts compressing */
 "Compress" = "Compress";
+
+/* Finder menu: compress straight to a ZIP; %@ = archive file name */
+"Compress to “%@”" = "Compress to “%@”";
+
+/* Finder menu: open the New window with the selected items */
+"Compress with Kompac…" = "Compress with Kompac…";

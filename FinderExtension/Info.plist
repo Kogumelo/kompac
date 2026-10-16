@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Finder extension (Contents/PlugIns/KompacFinder.appex): "Compress to …zip" and "Compress with
+	     Kompac…" in the right-click menu. The identifier must start with the app's. -->
+	<key>CFBundleName</key>
+	<string>Kompac</string>
+	<key>CFBundleDisplayName</key>
+	<string>Kompac</string>
+	<key>CFBundleIdentifier</key>
+	<string>br.com.kogut.kompac.finder</string>
+	<key>CFBundleExecutable</key>
+	<string>KompacFinder</string>
+	<key>CFBundlePackageType</key>
+	<string>XPC!</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.1</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>14.0</string>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.FinderSync</string>
+		<key>NSExtensionPrincipalClass</key>
+		<string>KompacFinder.FinderSync</string>
+		<key>NSExtensionAttributes</key>
+		<dict/>
+	</dict>
+</dict>
+</plist>

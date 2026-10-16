@@ -31,7 +31,7 @@ e siga com o `main`.
 ```
 git -C "$R" branch --show-current                                                    # tem que ser main
 git -C "$R" diff --quiet HEAD && echo LIMPO                                          # tem que sair LIMPO
-git -C "$R" status --porcelain -- Sources Resources vendor Info.plist Package.swift icon   # tem que sair VAZIO
+git -C "$R" status --porcelain -- Sources Resources vendor Info.plist Package.swift icon FinderExtension   # tem que sair VAZIO
 ```
 
 - **Fora do `main`:** pare. O Sobre o Kompac mostra o commit de onde o build
@@ -74,6 +74,7 @@ ls /Applications/Kompac.app/Contents/Resources/Kompac.icns                      
 ls /Applications/Kompac.app/Contents/Resources/en.lproj/Localizable.strings     # tem que existir
 /Applications/Kompac.app/Contents/Resources/7zz i | head -3                     # o motor tem que rodar (7-Zip 26.04)
 codesign --verify /Applications/Kompac.app && echo ASSINATURA-OK
+pluginkit -m -v -i br.com.kogut.kompac.finder                                    # uma linha só, com "+" e o caminho em /Applications
 ```
 
 - carimbo diferente do HEAD, ou com `-dirty`: algo escapou do passo 1 — diga o quê;
@@ -81,7 +82,10 @@ codesign --verify /Applications/Kompac.app && echo ASSINATURA-OK
   Konfig teve em 12/10/2026);
 - sem `en.lproj/Localizable.strings`: a interface sai só com as chaves, sem a
   tradução — o `build.sh` não copiou `Resources/*.lproj`;
-- o `7zz` não roda: o app abre mas não lista nem extrai nada — pare e relate.
+- o `7zz` não roda: o app abre mas não lista nem extrai nada — pare e relate;
+- a extensão do Finder sem `+`, com caminho fora de `/Applications` ou em mais
+  de uma linha: o botão direito do Finder fica sem "Compactar em …zip" e
+  "Compactar com o Kompac…", ou aponta para uma cópia de teste — diga qual caso.
 
 ## Saída (em português)
 

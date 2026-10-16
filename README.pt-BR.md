@@ -69,12 +69,30 @@ topo do arquivo com o próprio nome.
   intermediário no disco.
 - O 7zz 26.04 **não cria** zstd (`E_NOTIMPL`), só lê.
 
+### Pelo Finder (botão direito)
+
+Dois itens no menu de qualquer arquivo ou pasta:
+
+- **Compactar em “nome.zip”:** ZIP, nível Normal, ao lado dos originais, sem perguntar nada. A
+  janela só mostra o progresso e fecha ao terminar; com erro ou aviso do 7zz, fica aberta com o
+  aviso.
+- **Compactar com o Kompac…:** abre a janela Novo com os itens selecionados.
+
+É uma extensão do Finder (`Contents/PlugIns/KompacFinder.appex`, tipo FinderSync, o mesmo que
+outros compactadores usam para pôr itens ali). O Finder só a carrega dentro da sandbox, e a sandbox
+não a deixa rodar o 7zz nos arquivos do usuário: ela só monta um endereço
+`kompac://compress?action=zip|window&path=…` (`FinderRequest`) e o abre com o Kompac.app em que
+mora. O `build.sh --install` a registra e liga (`pluginkit -e use`), porque extensões do Finder de
+terceiros começam desligadas; para desligar: Ajustes do Sistema › Geral › Itens de Início e
+Extensões › Finder. Se o menu não aparecer logo depois de instalar: `killall Finder`.
+
 ## Estrutura
 
 | Pasta | O quê |
 |---|---|
 | `Sources/KompacCore` | núcleo sem UI: roda o `7zz`, lê `7zz l -slt`, extrai e compacta (`Compression.swift`) com progresso (`-bsp1`) e cancelamento, faz a prévia e converte nomes |
 | `Sources/Kompac` | app AppKit + SwiftUI, um `NSDocument` somente leitura por arquivo aberto; a janela Novo (`CompressView`/`CompressModel`) não é documento |
+| `Sources/KompacFinder` + `FinderExtension/` | a extensão do Finder (menu do botão direito): código, o `Info.plist` dela e a permissão de sandbox |
 | `Resources/<idioma>.lproj` | textos da interface (`Localizable.strings`) e nomes dos tipos de documento (`InfoPlist.strings`), uma pasta por idioma |
 | `Tests/KompacCoreTests` | `swift test`; as fixtures são geradas por `Tests/make-fixtures.sh` |
 | `icon/` | `kompac.svg` (desenho), `kompac-16.svg` (desenho de 16 px) e `Kompac.icns` (versionado); `make-icon.sh` regera o .icns quando o desenho muda |

@@ -29,6 +29,9 @@ final class CompressModel {
     @ObservationIgnored private var task: Task<Void, Never>?
     /// Called when finished (self-test).
     @ObservationIgnored var onFinish: (() -> Void)?
+    /// "Compress to …zip" from the Finder: the window only shows progress, and closes once the
+    /// archive is created without warnings. Errors and warnings keep it open.
+    @ObservationIgnored var closesWhenDone = false
 
     var isRunning: Bool { progress != nil }
     var canStart: Bool {
@@ -139,6 +142,7 @@ final class CompressModel {
             }
             progress = nil
             onFinish?()
+            if closesWhenDone && result != nil && notice == nil { window?.close() }
         }
     }
 
