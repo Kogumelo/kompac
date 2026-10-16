@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="1024" height="1024">
+  <!-- Kompac logo without the plate, for Kommand's project card (logo = in ~/.kommand/projects/kompac.toml).
+       The navy box of kompac.svg fills the whole square (radius 22, like the other Kommand logos),
+       and the zipper inside is kompac.svg's drawing as is, scaled 1.5625x (the box's 64 becomes 100)
+       around its centre (50, 52) so it keeps the same proportion to the box. -->
+  <rect width="100" height="100" rx="22" fill="#22314f"/>
+  <g transform="translate(50 50) scale(1.5625) translate(-50 -52)">
+    <g fill="#f4b740">
+      <!-- closed teeth, left of the slider -->
+      <rect x="30.58" y="48.2" width="2.6" height="5" rx=".5"/>
+      <rect x="33.78" y="50.8" width="2.6" height="5" rx=".5"/>
+      <rect x="36.98" y="48.2" width="2.6" height="5" rx=".5"/>
+      <rect x="40.18" y="50.8" width="2.6" height="5" rx=".5"/>
+      <!-- upper arm: opened tape -->
+      <rect x="-1.3" y="-2.5" width="2.6" height="5" rx=".5" transform="translate(55.78 48.81) rotate(-40)"/>
+      <rect x="-1.3" y="-2.5" width="2.6" height="5" rx=".5" transform="translate(59.46 45.72) rotate(-40)"/>
+      <rect x="-1.3" y="-2.5" width="2.6" height="5" rx=".5" transform="translate(63.14 42.64) rotate(-40)"/>
+      <rect x="-1.3" y="-2.5" width="2.6" height="5" rx=".5" transform="translate(66.82 39.55) rotate(-40)"/>
+      <!-- lower arm: opened tape -->
+      <rect x="-1.3" y="-2.5" width="2.6" height="5" rx=".5" transform="translate(55.78 55.19) rotate(40)"/>
+      <rect x="-1.3" y="-2.5" width="2.6" height="5" rx=".5" transform="translate(59.46 58.28) rotate(40)"/>
+      <rect x="-1.3" y="-2.5" width="2.6" height="5" rx=".5" transform="translate(63.14 61.36) rotate(40)"/>
+      <rect x="-1.3" y="-2.5" width="2.6" height="5" rx=".5" transform="translate(66.82 64.45) rotate(40)"/>
+    </g>
+    <!-- slider: the K's stem, with the pull hole -->
+    <rect x="43.98" y="39.5" width="8" height="25" rx="2.4" fill="#f4b740"/>
+    <rect x="46.5" y="42.5" width="2.96" height="3.5" rx="1.23" fill="#22314f"/>
+  </g>
+</svg>
