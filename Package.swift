@@ -17,14 +17,21 @@ var targets: [Target] = [
 #if os(macOS)
 // O app (AppKit + SwiftUI) só existe no Mac.
 products.append(.executable(name: "Kompac", targets: ["Kompac"]))
-targets.append(
+products.append(.executable(name: "KompacFinder", targets: ["KompacFinder"]))
+targets.append(contentsOf: [
     // Modo de linguagem 5: o NSDocument ainda não tem anotações completas de concorrência.
     .executableTarget(
         name: "Kompac",
         dependencies: ["KompacCore"],
         swiftSettings: [.swiftLanguageMode(.v5)]
-    )
-)
+    ),
+    // Extensão do Finder (menu do botão direito); o build.sh a monta em Contents/PlugIns.
+    .executableTarget(
+        name: "KompacFinder",
+        dependencies: ["KompacCore"],
+        swiftSettings: [.swiftLanguageMode(.v5)]
+    ),
+])
 #endif
 
 let package = Package(

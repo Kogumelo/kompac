@@ -29,6 +29,18 @@
 	<string>14.0</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
+	<!-- kompac://compress?…: how the Finder extension hands the selection over (FinderRequest). -->
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>br.com.kogut.kompac.compress</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kompac</string>
+			</array>
+		</dict>
+	</array>
 	<key>NSHighResolutionCapable</key>
 	<true/>
 	<key>NSHumanReadableCopyright</key>

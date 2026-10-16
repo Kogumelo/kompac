@@ -36,6 +36,30 @@ final class DocumentController: NSDocumentController {
 
 @MainActor
 final class AppDelegate: NSObject, NSApplicationDelegate {
+    /// Launched (or reached) by the Finder extension: no Open panel, even after a quick ZIP has
+    /// already closed its window.
+    private var gotFinderRequest = false
+
+    /// `kompac:` URLs come as an Apple event; files to open still go to NSDocumentController.
+    func applicationWillFinishLaunching(_ n: Notification) {
+        NSAppleEventManager.shared().setEventHandler(self, andSelector: #selector(handleURL(_:withReply:)),
+                                                     forEventClass: AEEventClass(kInternetEventClass),
+                                                     andEventID: AEEventID(kAEGetURL))
+    }
+
+    /// From the Finder extension: compress straight to ZIP, or open the New window with the items.
+    @objc func handleURL(_ event: NSAppleEventDescriptor, withReply reply: NSAppleEventDescriptor) {
+        guard let text = event.paramDescriptor(forKeyword: keyDirectObject)?.stringValue,
+              let url = URL(string: text), let request = FinderRequest(url: url) else { return }
+        gotFinderRequest = true
+        let model = CompressWindow.show(with: request.items)
+        NSApp.activate()
+        if request.action == .zip {
+            model.closesWhenDone = true
+            model.start()
+        }
+    }
+
     func applicationDidFinishLaunching(_ n: Notification) {
         if CompressSelfTest.output != nil {
             CompressSelfTest.run()
@@ -43,7 +67,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
         // Launched without a file (from the Dock or Launchpad): show the Open panel.
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-            if NSDocumentController.shared.documents.isEmpty && SelfTest.output == nil {
+            if NSDocumentController.shared.documents.isEmpty && !self.gotFinderRequest && SelfTest.output == nil {
                 NSDocumentController.shared.openDocument(nil)
             }
         }
