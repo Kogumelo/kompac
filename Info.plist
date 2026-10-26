@@ -196,6 +196,31 @@
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict>
+			<!-- macOS knows com.rarlab.rar-archive by name only, with no .rar tag: without this, a .rar gets a
+			     "dynamic" type, matches none of the document types above and Kompac is greyed out in Open With. -->
+			<key>UTTypeIdentifier</key>
+			<string>com.rarlab.rar-archive</string>
+			<key>UTTypeDescription</key>
+			<string>RAR archive</string>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+				<string>public.archive</string>
+			</array>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>rar</string>
+				</array>
+				<key>public.mime-type</key>
+				<array>
+					<string>application/vnd.rar</string>
+					<string>application/x-rar-compressed</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
 			<!-- macOS does not declare .zst/.tzst (it gets a "dynamic" type). Imported declaration: if another
 			     app declares the type, its declaration wins. -->
 			<key>UTTypeIdentifier</key>
