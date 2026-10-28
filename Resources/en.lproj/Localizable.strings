@@ -460,3 +460,9 @@
 
 /* Finder menu: open the New window with the selected items */
 "Compress with Kompac…" = "Compress with Kompac…";
+
+/* Finder menu: extract the selected archives next to them */
+"Extract Here" = "Extract Here";
+
+/* Finder menu: open the selected archives in Kompac */
+"Extract with Kompac…" = "Extract with Kompac…";

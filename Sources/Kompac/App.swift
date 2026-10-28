@@ -47,16 +47,26 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                                                      andEventID: AEEventID(kAEGetURL))
     }
 
-    /// From the Finder extension: compress straight to ZIP, or open the New window with the items.
+    /// From the Finder extension: compress straight to ZIP, or open the New window with the items;
+    /// extract each archive next to it, or open each one in its window.
     @objc func handleURL(_ event: NSAppleEventDescriptor, withReply reply: NSAppleEventDescriptor) {
         guard let text = event.paramDescriptor(forKeyword: keyDirectObject)?.stringValue,
               let url = URL(string: text), let request = FinderRequest(url: url) else { return }
         gotFinderRequest = true
-        let model = CompressWindow.show(with: request.items)
         NSApp.activate()
-        if request.action == .zip {
-            model.closesWhenDone = true
-            model.start()
+        switch request.action {
+        case .zip, .window:
+            let model = CompressWindow.show(with: request.items)
+            if request.action == .zip {
+                model.closesWhenDone = true
+                model.start()
+            }
+        case .extractHere, .open:
+            for item in request.items {
+                NSDocumentController.shared.openDocument(withContentsOf: item, display: true) { doc, _, _ in
+                    if request.action == .extractHere { (doc as? Document)?.model?.extractAllWhenReady() }
+                }
+            }
         }
     }
 

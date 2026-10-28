@@ -78,10 +78,20 @@ Dois itens no menu de qualquer arquivo ou pasta:
   aviso.
 - **Compactar com o Kompac…:** abre a janela Novo com os itens selecionados.
 
+E mais dois quando todos os itens selecionados são arquivos compactados (pela extensão: zip, rar, 7z,
+tar, gz, tgz, bz2, tbz, xz, txz, zst, tzst, iso, dmg, 001):
+
+- **Descompactar aqui:** Extrair Tudo de cada arquivo, ao lado dele, com as regras da janela (um item
+  só no topo vai direto, vários vão para uma pasta com o nome do arquivo, nada é sobrescrito). A
+  janela fecha ao terminar; senha, erro ou cancelamento a mantêm aberta.
+- **Descompactar com o Kompac…:** abre cada arquivo na sua janela, para escolher o que extrair e
+  para onde.
+
 É uma extensão do Finder (`Contents/PlugIns/KompacFinder.appex`, tipo FinderSync, o mesmo que
 outros compactadores usam para pôr itens ali). O Finder só a carrega dentro da sandbox, e a sandbox
 não a deixa rodar o 7zz nos arquivos do usuário: ela só monta um endereço
-`kompac://compress?action=zip|window&path=…` (`FinderRequest`) e o abre com o Kompac.app em que
+`kompac://compress?action=zip|window&path=…` ou `kompac://extract?action=extractHere|open&path=…`
+(`FinderRequest`) e o abre com o Kompac.app em que
 mora. O `build.sh --install` a registra e liga (`pluginkit -e use`), porque extensões do Finder de
 terceiros começam desligadas; para desligar: Ajustes do Sistema › Geral › Itens de Início e
 Extensões › Finder. Se o menu não aparecer logo depois de instalar: `killall Finder`.
