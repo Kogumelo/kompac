@@ -61,6 +61,10 @@ final class WindowModel {
     var notice: String?
 
     @ObservationIgnored weak var window: NSWindow?
+    /// "Extract Here" from the Finder: extract everything as soon as the listing is ready, and close
+    /// the window once it is done. A password asked, an error or a cancellation keeps it open.
+    @ObservationIgnored private var extractsWhenReady = false
+    @ObservationIgnored private var closesWhenDone = false
     @ObservationIgnored private var password: String?
     @ObservationIgnored private let tool = SevenZip.locate()
     @ObservationIgnored private var loadTask: Task<Void, Never>?
@@ -96,6 +100,10 @@ final class WindowModel {
                 detected = NameDecoder.detect(names)
                 rebuildTree()
                 phase = .ready
+                if extractsWhenReady {
+                    extractsWhenReady = false
+                    extract(selectedOnly: false)
+                }
             } catch ArchiveError.passwordRequired {
                 phase = .needsPassword
                 askPassword(for: .open, error: nil)
@@ -189,6 +197,11 @@ final class WindowModel {
 
     // MARK: Extract
 
+    func extractAllWhenReady() {
+        closesWhenDone = true
+        if phase == .ready { extract(selectedOnly: false) } else { extractsWhenReady = true }
+    }
+
     func extract(selectedOnly: Bool) {
         guard canExtract, let tool, let listing, let tree else { return }
         let nodes = selectedOnly ? tree.topMost(selection) : []
@@ -219,6 +232,7 @@ final class WindowModel {
                     Task { @MainActor in self.extraction?.progress = p }
                 }
                 lastResult = r.location
+                if closesWhenDone { window?.close() }
             } catch ArchiveError.cancelled {
                 notice = NSLocalizedString("Extraction cancelled. Nothing was written.", comment: "Top banner notice")
             } catch ArchiveError.passwordRequired {

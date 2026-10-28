@@ -78,9 +78,18 @@ Two items in the menu of any file or folder:
   open with the notice.
 - **Compress with Kompac…:** opens the New window with the selected items.
 
+And two more when every selected item is an archive (by extension: zip, rar, 7z, tar, gz, tgz, bz2,
+tbz, xz, txz, zst, tzst, iso, dmg, 001):
+
+- **Extract Here:** Extract All of each archive, next to it, with the window's rules (a single item
+  at the top goes straight there, several go into a folder named after the archive, nothing is
+  overwritten). The window closes when done; a password, an error or a cancellation keeps it open.
+- **Extract with Kompac…:** opens each archive in its window, to choose what to extract and where.
+
 It is a Finder extension (`Contents/PlugIns/KompacFinder.appex`, FinderSync type, the same kind of
 item other archivers put there). Finder only loads it sandboxed, and the sandbox keeps it from running
-7zz on the user's files: it just builds a `kompac://compress?action=zip|window&path=…` URL
+7zz on the user's files: it just builds a `kompac://compress?action=zip|window&path=…` or
+`kompac://extract?action=extractHere|open&path=…` URL
 (`FinderRequest`) and opens it with the Kompac.app it lives in. `build.sh --install` registers it and
 turns it on (`pluginkit -e use`), since third-party Finder extensions start off; to turn it off:
 System Settings › General › Login Items & Extensions › Finder. If the menu does not show up right

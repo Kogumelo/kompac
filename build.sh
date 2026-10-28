@@ -42,7 +42,7 @@ cp vendor/7zz "$APP/Contents/Resources/7zz"
 cp Resources/7zip-LICENSE.txt "$APP/Contents/Resources/7zip-LICENSE.txt"
 # one folder per language: UI strings, document type names, and AppKit's own texts (alerts, "Open Recent")
 cp -R Resources/*.lproj "$APP/Contents/Resources/"
-# Finder extension ("Compress to …zip" / "Compress with Kompac…" in the right-click menu), same build number
+# Finder extension ("Compress to …zip" / "Compress with Kompac…", and "Extract Here" / "Extract with Kompac…" on archives, in the right-click menu), same build number
 EXT="$APP/Contents/PlugIns/KompacFinder.appex"
 mkdir -p "$EXT/Contents/MacOS" "$EXT/Contents/Resources"
 cp FinderExtension/Info.plist "$EXT/Contents/Info.plist"
